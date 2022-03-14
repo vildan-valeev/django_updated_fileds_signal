@@ -3,33 +3,35 @@ from django.db import models
 from example_app.tracker import track_data
 
 
-class ItemType(models.Model):
+class User(models.Model):
     name = models.CharField(max_length=50)
+    balance = models.IntegerField()
 
     class Meta:
         ordering = ['id']
-        verbose_name = 'Тип товара'
-        verbose_name_plural = 'Типы товаров'
+        verbose_name = 'Пользователь'
+        verbose_name_plural = 'Пользователи'
 
     def __str__(self):
         return self.name
 
 
 def get_common_user():
-    obj, created = ItemType.objects.get_or_create(name='Дефолтный товар')
+    obj, created = User.objects.get_or_create(name='Дефолтный юзер', balance=5000)
     return obj
 
 
-@track_data('name', 'item_type',)
+@track_data('name', 'user', 'amount')
 class Item(models.Model):
     name = models.CharField(max_length=100, verbose_name='Имя', null=True, blank=True)
-    item_type = models.ForeignKey(ItemType, on_delete=models.SET_DEFAULT, verbose_name='Тип товара',
-                                  default=get_common_user, related_name='items')
+    user = models.ForeignKey(User, on_delete=models.SET_DEFAULT, verbose_name='Тип товара',
+                             default=get_common_user, related_name='items')
+    amount = models.IntegerField(verbose_name='Цена')
     created = models.DateTimeField(auto_now_add=True, editable=False, null=True, verbose_name='Создан')
     updated = models.DateTimeField(auto_now=True, editable=False, null=True, verbose_name='Обновлен')
 
     def __str__(self):
-        return f'{self.name} | {self.item_type}'
+        return f'{self.name}'
 
     class Meta:
         ordering = ['id']

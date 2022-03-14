@@ -53,10 +53,30 @@
     "model": "example_app.item",
     "pk": 2,
     "fields": {
-        "name": "sdfsdf",
+        "name": "ergdfg",
         "item_type": 1,
         "created": "2022-03-14T08:07:11.350Z",
-        "updated": "2022-03-14T08:07:11.350Z"
+        "updated": "2022-03-14T08:42:21.854Z"
+    }
+},
+{
+    "model": "example_app.item",
+    "pk": 3,
+    "fields": {
+        "name": "ereg",
+        "item_type": 1,
+        "created": "2022-03-14T08:36:34.383Z",
+        "updated": "2022-03-14T08:36:34.383Z"
+    }
+},
+{
+    "model": "example_app.item",
+    "pk": 4,
+    "fields": {
+        "name": "Cправочник2",
+        "item_type": 1,
+        "created": "2022-03-14T08:38:37.424Z",
+        "updated": "2022-03-14T08:38:37.424Z"
     }
 },
 {
@@ -93,6 +113,60 @@
         "object_repr": "sdfsdf | Дефолтный товар",
         "action_flag": 1,
         "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2022-03-14T08:36:34.387Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "example_app",
+            "item"
+        ],
+        "object_id": "3",
+        "object_repr": "ereg | Дефолтный товар",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2022-03-14T08:38:37.426Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "example_app",
+            "item"
+        ],
+        "object_id": "4",
+        "object_repr": "Cправочник2 | Дефолтный товар",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2022-03-14T08:42:21.860Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "example_app",
+            "item"
+        ],
+        "object_id": "2",
+        "object_repr": "ergdfg | Дефолтный товар",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
     }
 }
 ]
