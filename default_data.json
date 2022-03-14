@@ -1,0 +1,98 @@
+[
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$320000$wRFpknX8XOSI2Rn1sLiDOV$0suzoBh60ludEsW/Oia9StX8QG0w5V7+AiIQTnrG26o=",
+        "last_login": "2022-03-14T08:06:51.961Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2021-12-08T11:29:43.492Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "45s5xv5as4r7oyozqo8s17shrr0bj1ij",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGlle_-KlpOcM1tre4ABypDipEHeHSCmgfTPzXiLStta4dV7iVMRZgDj9bonyg9sOyp3abZZ5busyJbkr8qBdXufCz8vh_h1U6vVbj-iMd4HYKhcSYkiDCjxoB9YrA6iNVha9sagDAwM5HnUmm0ipAKWI9weizDaF:1muv92:iS4iz6Rbadwii3jUL8nbItLx3Vcnazg1Lz5SETfmddE",
+        "expire_date": "2021-12-22T11:29:56.649Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "dsagzr2s4qhlgjgkexv6tcp7lv0xw8zg",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGlle_-KlpOcM1tre4ABypDipEHeHSCmgfTPzXiLStta4dV7iVMRZgDj9bonyg9sOyp3abZZ5busyJbkr8qBdXufCz8vh_h1U6vVbj-iMd4HYKhcSYkiDCjxoB9YrA6iNVha9sagDAwM5HnUmm0ipAKWI9weizDaF:1nTfj9:r138UvWqkhwMKcfoBBV7lamFuxr_8glvTIQfbYNZgj4",
+        "expire_date": "2022-03-28T08:06:51.970Z"
+    }
+},
+{
+    "model": "example_app.itemtype",
+    "pk": 1,
+    "fields": {
+        "name": "Дефолтный товар"
+    }
+},
+{
+    "model": "example_app.item",
+    "pk": 1,
+    "fields": {
+        "name": "sdfs",
+        "item_type": 1,
+        "created": "2022-03-14T08:07:06.182Z",
+        "updated": "2022-03-14T08:07:06.182Z"
+    }
+},
+{
+    "model": "example_app.item",
+    "pk": 2,
+    "fields": {
+        "name": "sdfsdf",
+        "item_type": 1,
+        "created": "2022-03-14T08:07:11.350Z",
+        "updated": "2022-03-14T08:07:11.350Z"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2022-03-14T08:07:06.187Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "example_app",
+            "item"
+        ],
+        "object_id": "1",
+        "object_repr": "sdfs | Дефолтный товар",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2022-03-14T08:07:11.353Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "example_app",
+            "item"
+        ],
+        "object_id": "2",
+        "object_repr": "sdfsdf | Дефолтный товар",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}
+]
