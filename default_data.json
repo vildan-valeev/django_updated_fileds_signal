@@ -2,8 +2,8 @@
 {
     "model": "auth.user",
     "fields": {
-        "password": "pbkdf2_sha256$320000$wRFpknX8XOSI2Rn1sLiDOV$0suzoBh60ludEsW/Oia9StX8QG0w5V7+AiIQTnrG26o=",
-        "last_login": "2022-03-14T08:06:51.961Z",
+        "password": "pbkdf2_sha256$320000$y0yRC3xtDudHcn6nWDNCkZ$TONu6R5rOcu+JgAt6r8YpmssXjga8rPp6Vcdp3SLkkk=",
+        "last_login": "2022-03-14T08:54:46.377Z",
         "is_superuser": true,
         "username": "admin",
         "first_name": "",
@@ -11,79 +11,69 @@
         "email": "",
         "is_staff": true,
         "is_active": true,
-        "date_joined": "2021-12-08T11:29:43.492Z",
+        "date_joined": "2022-03-14T08:54:21.475Z",
         "groups": [],
         "user_permissions": []
     }
 },
 {
     "model": "sessions.session",
-    "pk": "45s5xv5as4r7oyozqo8s17shrr0bj1ij",
+    "pk": "2b7omkjtgj98imoyaj1euqxpjl53xor8",
     "fields": {
-        "session_data": ".eJxVjDsOwjAQBe_iGlle_-KlpOcM1tre4ABypDipEHeHSCmgfTPzXiLStta4dV7iVMRZgDj9bonyg9sOyp3abZZ5busyJbkr8qBdXufCz8vh_h1U6vVbj-iMd4HYKhcSYkiDCjxoB9YrA6iNVha9sagDAwM5HnUmm0ipAKWI9weizDaF:1muv92:iS4iz6Rbadwii3jUL8nbItLx3Vcnazg1Lz5SETfmddE",
-        "expire_date": "2021-12-22T11:29:56.649Z"
+        "session_data": ".eJxVjEEOwiAQRe_C2hAoMIBL956BzMBUqqYkpV0Z765NutDtf-_9l0i4rTVtnZc0FXEWWpx-N8L84HkH5Y7zrcnc5nWZSO6KPGiX11b4eTncv4OKvX5rS0MxAAqswzyC99pZUj4oiIiRovE5RGAeiy2WHHMOQKCi9mbIbjDi_QHMujdW:1nTgTW:VPu7D8h0gEYscdG5HakokonSrcdBjyQrICsXRQsX-zI",
+        "expire_date": "2022-03-28T08:54:46.386Z"
     }
 },
 {
-    "model": "sessions.session",
-    "pk": "dsagzr2s4qhlgjgkexv6tcp7lv0xw8zg",
-    "fields": {
-        "session_data": ".eJxVjDsOwjAQBe_iGlle_-KlpOcM1tre4ABypDipEHeHSCmgfTPzXiLStta4dV7iVMRZgDj9bonyg9sOyp3abZZ5busyJbkr8qBdXufCz8vh_h1U6vVbj-iMd4HYKhcSYkiDCjxoB9YrA6iNVha9sagDAwM5HnUmm0ipAKWI9weizDaF:1nTfj9:r138UvWqkhwMKcfoBBV7lamFuxr_8glvTIQfbYNZgj4",
-        "expire_date": "2022-03-28T08:06:51.970Z"
-    }
-},
-{
-    "model": "example_app.itemtype",
+    "model": "example_app.user",
     "pk": 1,
     "fields": {
-        "name": "Дефолтный товар"
+        "name": "Дефолтный юзер",
+        "balance": 5000
     }
 },
 {
-    "model": "example_app.item",
-    "pk": 1,
-    "fields": {
-        "name": "sdfs",
-        "item_type": 1,
-        "created": "2022-03-14T08:07:06.182Z",
-        "updated": "2022-03-14T08:07:06.182Z"
-    }
-},
-{
-    "model": "example_app.item",
+    "model": "example_app.user",
     "pk": 2,
     "fields": {
-        "name": "ergdfg",
-        "item_type": 1,
-        "created": "2022-03-14T08:07:11.350Z",
-        "updated": "2022-03-14T08:42:21.854Z"
+        "name": "Юзер 1",
+        "balance": 400
     }
 },
 {
     "model": "example_app.item",
-    "pk": 3,
+    "pk": 1,
     "fields": {
-        "name": "ereg",
-        "item_type": 1,
-        "created": "2022-03-14T08:36:34.383Z",
-        "updated": "2022-03-14T08:36:34.383Z"
-    }
-},
-{
-    "model": "example_app.item",
-    "pk": 4,
-    "fields": {
-        "name": "Cправочник2",
-        "item_type": 1,
-        "created": "2022-03-14T08:38:37.424Z",
-        "updated": "2022-03-14T08:38:37.424Z"
+        "name": "товар 1",
+        "user": 2,
+        "amount": 100,
+        "created": "2022-03-14T08:57:28.057Z",
+        "updated": "2022-03-14T09:06:45.835Z"
     }
 },
 {
     "model": "admin.logentry",
     "pk": 1,
     "fields": {
-        "action_time": "2022-03-14T08:07:06.187Z",
+        "action_time": "2022-03-14T08:56:36.111Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "example_app",
+            "user"
+        ],
+        "object_id": "2",
+        "object_repr": "Юзер 1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2022-03-14T08:57:28.061Z",
         "user": [
             "admin"
         ],
@@ -92,25 +82,7 @@
             "item"
         ],
         "object_id": "1",
-        "object_repr": "sdfs | Дефолтный товар",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 2,
-    "fields": {
-        "action_time": "2022-03-14T08:07:11.353Z",
-        "user": [
-            "admin"
-        ],
-        "content_type": [
-            "example_app",
-            "item"
-        ],
-        "object_id": "2",
-        "object_repr": "sdfsdf | Дефолтный товар",
+        "object_repr": "товар 1",
         "action_flag": 1,
         "change_message": "[{\"added\": {}}]"
     }
@@ -119,7 +91,7 @@
     "model": "admin.logentry",
     "pk": 3,
     "fields": {
-        "action_time": "2022-03-14T08:36:34.387Z",
+        "action_time": "2022-03-14T08:59:51.036Z",
         "user": [
             "admin"
         ],
@@ -127,17 +99,17 @@
             "example_app",
             "item"
         ],
-        "object_id": "3",
-        "object_repr": "ereg | Дефолтный товар",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
+        "object_id": "1",
+        "object_repr": "товар 1",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0426\\u0435\\u043d\\u0430\"]}}]"
     }
 },
 {
     "model": "admin.logentry",
     "pk": 4,
     "fields": {
-        "action_time": "2022-03-14T08:38:37.426Z",
+        "action_time": "2022-03-14T09:06:16.453Z",
         "user": [
             "admin"
         ],
@@ -145,17 +117,17 @@
             "example_app",
             "item"
         ],
-        "object_id": "4",
-        "object_repr": "Cправочник2 | Дефолтный товар",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
+        "object_id": "1",
+        "object_repr": "товар 1",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0426\\u0435\\u043d\\u0430\"]}}]"
     }
 },
 {
     "model": "admin.logentry",
     "pk": 5,
     "fields": {
-        "action_time": "2022-03-14T08:42:21.860Z",
+        "action_time": "2022-03-14T09:06:45.838Z",
         "user": [
             "admin"
         ],
@@ -163,10 +135,10 @@
             "example_app",
             "item"
         ],
-        "object_id": "2",
-        "object_repr": "ergdfg | Дефолтный товар",
+        "object_id": "1",
+        "object_repr": "товар 1",
         "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0426\\u0435\\u043d\\u0430\"]}}]"
     }
 }
 ]
